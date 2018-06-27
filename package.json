@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "nodemon server & yarn build --watch",
-    "build": "webpack --config client/webpack.config.js",
+    "build": "webpack --config webpack.config.js",
     "test": "jest"
   },
   "babel": {

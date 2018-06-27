@@ -1,10 +1,10 @@
 import request from 'superagent'
 
-const rootUrl = '/api/v1'
+const rootUrl = 'https://eonet.sci.gsfc.nasa.gov/api/v2.1/events?days=10'
 
-export function getFruits () {
-  return request.get(rootUrl + '/fruits')
+export function getCurrentActive () {
+  return request.get(rootUrl + '&status=open')
     .then(res => {
-      return res.body.fruits
+      return res.body.events
     })
 }
